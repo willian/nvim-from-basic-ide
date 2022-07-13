@@ -142,6 +142,7 @@ You can install new plugins here: [plugins](https://github.com/willian/nvim/blob
 - [impatient.nvim](https://github.com/lewis6991/impatient.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [alpha-nvim](https://github.com/goolord/alpha-nvim)
+- [folke/which-key.nvim](https://github.com/folke/which-key.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [darkplus.nvim](https://github.com/LunarVim/darkplus.nvim)
 - [Julpikar/night-owl.nvim](https://github.com/Julpikar/night-owl.nvim)
