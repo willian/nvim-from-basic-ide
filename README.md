@@ -1,14 +1,6 @@
-# A Basic Stable IDE config for Neovim
+# My personal config for Neovim
 
-> Why does this repo exist?
-
-This config attempts to provide a rock solid fully featured starting point for someone new to Neovim, or just tired of maintaining the basic IDE components of their config. 
-
-> What makes it "rock solid"?
-
-All of the included plugins are pinned to a version that ensures they are compatible and will not update potentially introducing errors into your config. For every Neovim release I will update this repo along with the community to keep it up to date with the newest versions.
-
-As I mentioned, this config is meant as a starting point for people new to Neovim who want a familiar IDE experience. The config has a very simple structure that makes it easy to add new plugins. 
+This config is based on [LunarVim/nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
 ## Install Neovim 0.7
 
@@ -29,14 +21,14 @@ sudo make install
 Make sure to remove or move your current `nvim` directory
 
 ```sh
-git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim
+git clone https://github.com/willian/nvim.git ~/.config/nvim
 ```
 
-Run `nvim` and wait for the plugins to be installed 
+Run `nvim` and wait for the plugins to be installed
 
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
+**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim)
 
-**NOTE** Checkout this file for some predefined keymaps: [keymaps](https://github.com/LunarVim/nvim-basic-ide/blob/master/lua/user/keymaps.lua)
+**NOTE** Checkout this file for some predefined keymaps: [keymaps](https://github.com/willian/nvim/blob/master/lua/user/keymaps.lua)
 
 ## Get healthy
 
@@ -61,11 +53,12 @@ First we'll fix copy/paste
   sudo apt install wl-clipboard # for wayland
   ```
 
-Next we need to install python support (node is optional)
+Next we need to install python support, node, and ruby:
 
 - Neovim python support
 
   ```sh
+  pip install neovim
   pip install pynvim
   ```
 
@@ -75,12 +68,24 @@ Next we need to install python support (node is optional)
   npm i -g neovim
   ```
 
-We will also need `ripgrep` for Telescope to work: 
-
-- Ripgrep
+- Neovim ruby support
 
   ```sh
-  sudo apt install ripgrep
+  gem install neovim
+  ```
+
+We will also need:
+
+- `ripgrep` for Telescope to work
+
+  ```sh
+  brew install ripgrep
+  ```
+
+- `lazygit`
+
+  ```sh
+  brew install lazygit
   ```
 ---
 
@@ -106,17 +111,17 @@ First Enter:
 
 and press `i` on the Language Server you wish to install
 
-Next you will need to add the server to this list: [servers](https://github.com/LunarVim/nvim-basic-ide/blob/8b9ec3bffe8c8577042baf07c75408532a733fea/lua/user/lsp/lsp-installer.lua#L6)
+Next you will need to add the server to this list: [servers](https://github.com/willian/nvim/blob/master/lua/user/lsp/lsp-installer.lua#L6)
 
 ### Formatters and linters
 
-Make sure the formatter or linter is installed and add it to this setup function: [null-ls](https://github.com/LunarVim/nvim-basic-ide/blob/8b9ec3bffe8c8577042baf07c75408532a733fea/lua/user/lsp/null-ls.lua#L13)
+Make sure the formatter or linter is installed and add it to this setup function: [null-ls](https://github.com/willian/nvim/blob/master/lua/user/lsp/null-ls.lua#L14)
 
 **NOTE** Some are already setup as examples, remove them if you want
 
 ### Plugins
 
-You can install new plugins here: [plugins](https://github.com/LunarVim/nvim-basic-ide/blob/8b9ec3bffe8c8577042baf07c75408532a733fea/lua/user/plugins.lua#L42)
+You can install new plugins here: [plugins](https://github.com/willian/nvim/blob/master/lua/user/plugins.lua#L42)
 
 ---
 
@@ -139,6 +144,7 @@ You can install new plugins here: [plugins](https://github.com/LunarVim/nvim-bas
 - [alpha-nvim](https://github.com/goolord/alpha-nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [darkplus.nvim](https://github.com/LunarVim/darkplus.nvim)
+- [Julpikar/night-owl.nvim](https://github.com/Julpikar/night-owl.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-path](https://github.com/hrsh7th/cmp-path)
@@ -151,6 +157,8 @@ You can install new plugins here: [plugins](https://github.com/LunarVim/nvim-bas
 - [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
 - [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+- [zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+- [zbirenbaum/copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
@@ -158,8 +166,3 @@ You can install new plugins here: [plugins](https://github.com/LunarVim/nvim-bas
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [DAPInstall.nvim](https://github.com/ravenxrz/DAPInstall.nvim)
 
----
-
-> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
-
-\- Edsger W. Dijkstra
