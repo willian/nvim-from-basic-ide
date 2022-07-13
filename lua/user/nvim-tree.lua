@@ -62,7 +62,11 @@ nvim_tree.setup {
         { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
         { key = "h", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
+        { key = { "+", "=" }, cb = "<CMD>lua require('nvim-tree').resize('+10')<CR>" },
+        { key = { "-" }, cb = "<CMD>lua require('nvim-tree').resize('-10')<CR>" },
+        { key = { "0" }, cb = "<CMD>lua require('nvim-tree').resize(30)<CR>" },
       },
     },
   },
 }
+

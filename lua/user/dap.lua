@@ -15,7 +15,9 @@ end
 
 dap_install.setup {}
 
-dap_install.config("python", {})
+dap_install.config("chrome", {}) -- JavaScriptReact/TypeScriptReact
+dap_install.config("jsnode", {}) -- JavaScript
+dap_install.config("ruby_vsc", {})
 -- add other configs here
 
 dapui.setup {
@@ -48,3 +50,4 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
+

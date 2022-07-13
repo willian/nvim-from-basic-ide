@@ -4,13 +4,20 @@ if not status_ok then
 end
 
 local servers = {
-  "sumneko_lua",
-  "cssls",
-  "html",
-  "tsserver",
-  "pyright",
   "bashls",
+  "cssls",
+  "cssmodules_ls",
+  "dockerls",
+  "emmet_ls",
+  "eslint",
+  "graphql",
+  "html",
   "jsonls",
+  "prismals",
+  "solargraph",
+  "sumneko_lua",
+  "tailwindcss",
+  "tsserver",
   "yamlls",
 }
 
@@ -34,10 +41,6 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
-  if server == "pyright" then
-    local pyright_opts = require "user.lsp.settings.pyright"
-    opts = vim.tbl_deep_extend("force", pyright_opts, opts)
-  end
-
   lspconfig[server].setup(opts)
 end
+

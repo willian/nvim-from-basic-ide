@@ -23,3 +23,4 @@ telescope.setup {
     },
   },
 }
+

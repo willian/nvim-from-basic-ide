@@ -90,3 +90,4 @@ bufferline.setup {
     },
   },
 }
+
