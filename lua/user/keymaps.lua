@@ -3,9 +3,9 @@ local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = true }
 
--- Remap \ as leader key
--- keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = "\\"
+-- Remap <space> as leader key
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",
