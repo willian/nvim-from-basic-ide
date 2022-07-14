@@ -12,6 +12,7 @@ if colorscheme == "night-owl" then
   vim.api.nvim_command("highlight NvimTreeNormalNC guifg=#8badc1 guibg=#000c1d")
   vim.api.nvim_command("highlight NvimTreeEndOfBuffer guifg=#000c1d guibg=#000c1d")
   vim.api.nvim_command("highlight CursorLine guibg=#01121F")
+  vim.api.nvim_command("highlight IndentBlanklineChar guifg=#102a44")
 
   -- Better highlight color for vim-illuminate
   vim.api.nvim_exec([[
