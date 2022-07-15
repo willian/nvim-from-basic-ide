@@ -3,9 +3,9 @@ local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = true }
 
--- Remap <space> as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
+-- Remap \ as leader key
+keymap("", "\\", "<Nop>", opts)
+vim.g.mapleader = "\\"
 
 -- Modes
 --   normal_mode = "n",
@@ -30,7 +30,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
-keymap("n", "<leader>/", "<cmd>nohlsearch<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -63,7 +62,8 @@ keymap("v", ">", ">gv", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>fe", ":NvimTreeFocus<CR>", opts)
+keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-S-e>", ":NvimTreeFocus<CR>", opts)
 
 -- Telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
