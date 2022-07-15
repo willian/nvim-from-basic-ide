@@ -21,4 +21,5 @@ require "user.alpha"
 require "user.lsp"
 require "user.dap"
 require "user.which-key"
+require "user.todo-comments"
 

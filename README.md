@@ -166,4 +166,6 @@ You can install new plugins here: [plugins](https://github.com/willian/nvim/blob
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [DAPInstall.nvim](https://github.com/ravenxrz/DAPInstall.nvim)
+- [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 
