@@ -41,6 +41,7 @@ local kind_icons = {
 	Event = "",
 	Operator = "",
 	TypeParameter = "",
+  Copilot = "",
 }
 
 cmp.setup({
@@ -95,8 +96,14 @@ cmp.setup({
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
-			vim_item.kind = kind_icons[vim_item.kind]
+      if entry.source.name == "copilot" then
+        vim_item.kind = kind_icons.Copilot
+      else
+        vim_item.kind = kind_icons[vim_item.kind]
+      end
+
 			vim_item.menu = ({
+				copilot = "",
 				nvim_lsp = "",
 				nvim_lua = "",
 				luasnip = "",
@@ -104,16 +111,17 @@ cmp.setup({
 				path = "",
 				emoji = "",
 			})[entry.source.name]
+
 			return vim_item
 		end,
 	},
 	sources = {
+    { name = "copilot" },
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
-    { name = "copilot" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
