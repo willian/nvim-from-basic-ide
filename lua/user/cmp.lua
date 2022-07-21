@@ -116,17 +116,17 @@ cmp.setup({
 		end,
 	},
 	sources = {
-    { name = "copilot" },
-		{ name = "nvim_lsp" },
-		{ name = "nvim_lua" },
-		{ name = "luasnip" },
-		{ name = "buffer" },
-		{ name = "path" },
+    { name = "copilot", group_index = 2 },
+		{ name = "nvim_lsp", group_index = 2 },
+		{ name = "nvim_lua", group_index = 2 },
+		{ name = "luasnip", group_index = 2 },
+		{ name = "path", group_index = 2 },
+		{ name = "buffer", group_index = 5 },
 	},
-	confirm_opts = {
-		behavior = cmp.ConfirmBehavior.Replace,
-		select = false,
-	},
+	-- confirm_opts = {
+	-- 	behavior = cmp.ConfirmBehavior.Replace,
+	-- 	select = false,
+	-- },
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
